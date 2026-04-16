@@ -15,9 +15,9 @@ module shift_register #(parameter DIRECTION = 0)
             register <= 32'b0;
         end else if (wr_en) begin
             if (DIRECTION) 
-                register <= {data, out[31:1]}; // go the right
+                register <= {data, register[31:1]}; // go the right
             else
-                register <= {out[30:0], data}; //go the left
+                register <= {register[30:0], data}; //go the left
             
         end
     end
