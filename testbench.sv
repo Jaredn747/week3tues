@@ -1,5 +1,7 @@
 `timescale 1ns / 1ps
 
+`include "shift_register.sv"
+
 module testbench();
 
 // Signals for UUT connection
